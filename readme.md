@@ -1,6 +1,6 @@
 # Task 1: Data Collection and Web Scraping
 
-> **Level 1** — Collect data from a website using web scraping techniques.
+## **Level 1** — Collect data from a website using web scraping techniques.
 
 ---
 
@@ -82,34 +82,7 @@ python scraper.py
 ```
 
 The scraped data will be saved to the `data/` directory in both CSV and JSON formats.
-
----
-
-## 🧩 Key Concepts
-
-### Basic Web Scraping
-```python
-import requests
-from bs4 import BeautifulSoup
-
-url = "https://quotes.toscrape.com"
-response = requests.get(url)
-soup = BeautifulSoup(response.text, "lxml")
-
-# Extract data
-titles = soup.find_all("h2", class_="title")
 ```
-
-
-## ⚠️ Ethical Guidelines
-
-- Always check the website's `robots.txt` before scraping
-- Add delays between requests to avoid overloading the server
-- Respect the website's Terms of Service
-- Do not scrape personal or sensitive data without authorization
-
----
-
 ## 📌 Notes
 
 - For websites with dynamic content (JavaScript-rendered), consider using `selenium` or `playwright` in addition to `requests`
